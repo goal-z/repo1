@@ -62,7 +62,11 @@ OR
 ```
 docker ps
 ```
-
+## To get inside a running container with id
+```
+docker exec -it <id> sh
+```
+_-it is interective mode. after docker ps, place the id number above_
 ## To stop the docker container
 ```
 docker stop my-curl-container
