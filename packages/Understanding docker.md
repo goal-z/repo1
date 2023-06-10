@@ -97,6 +97,6 @@ _Docker hub, ghcr, ACR etc.._
 
 ## Start as new container from the image in docker hub
 ```
-docker run -p 80:85 itsarnie/simplewebsite:v1
+docker run -p 80:80 itsarnie/simplewebsite:v1
 ```
-_-p means maps a host port to container port. Host port 80 is mapped to container port 85 meaning incoming traffic on the host port 80 will be forwarded to container port 85 aka port-forwarding. This allows us to access container's app that is listening on port 80 of the host. We can access the container app by http://localhost:80 in the web browser_
+_-p means maps a host port to container port. Host port 80 is mapped to container port 85 meaning incoming traffic on the host port 80 will be forwarded to container port 80 aka port-forwarding. This allows us to access container's app that is listening on port 80 of the host. We can access the container app by http://localhost:80 in the web browser_
