@@ -85,12 +85,12 @@ docker rm my-curl-container
 ```
 ## To tag an image
 ```
-docker tag simplewebsite repo1/simplewebsite:v1
+docker tag simplewebsite itsarnie/simplewebsite:v1
 ```
-_tag image with an new name (with reponame) in it like repo1/simplewebsite:v1_
+_tag image with an new name (with registry name) in it like repo1/simplewebsite:v1_
 ## Push image to Docker hub
 ```
-docker push repo1/simplewebsite:v1
+docker push itsarnie/simplewebsite:v1
 ```
 ## Docker registry
 _Docker hub, ghcr, ACR etc.._
