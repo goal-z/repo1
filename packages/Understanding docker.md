@@ -25,3 +25,50 @@
 ## How to inatall Docker
 - Docker desktop
 
+## Dockerfile code
+```
+FROM debian:latest 
+RUN apt-get update && apt-get -y install curl
+CMD ["sleep", "infinity"]
+```
+## Command to build docker
+```
+docker build -t my-curl-image .
+```
+``` 
+. means current dir from where you are i.e., look for Dockerfile in the current dir
+```
+_-t is a tag to name an image_
+## To see the image
+```
+docker images | grep my-curl-image
+```
+## To create and run a container from the image we have
+```
+docker run -d --name my-curl-container my-curl-image
+```
+_-d is to run in detached mode_
+_you can see your container running in docker desktop_
+
+## To get inside a running container
+```
+docker exec my-curl-container curl microsoft.com -v
+```
+_-v is verbose; here we get inside the container and execute a commnad_
+
+## To see running containers
+_go to docker desktop_
+OR
+```
+docker ps
+```
+
+## To stop the docker container
+```
+docker stop my-curl-container
+```
+## To remove the container
+```
+docker rm my-curl-container
+```
+
