@@ -36,7 +36,7 @@ namespace types -
 
 Cgroups - restricts resource usage and monitor how those resources are being utilized
 
-### comparison between VM and containers
+### Comparison between VM and containers
 | features/properties | VMs | Containers |
 |---------------------|-----|------------|
 | isolation           | full isolation from host os and other Vms | lightweight isolation from host os and other containers |
@@ -47,3 +47,30 @@ Cgroups - restricts resource usage and monitor how those resources are being uti
 | start time | minutes | seconds |
 | portability/ replaceability | difficult | easy |
 | fit for | monolithic application | microservices |
+
+### Monolithilic architecture
+| UI |
+|----|
+| Business Logic |
+| Data layer |
+| DB |
+
+- advantages - easier to deploy
+- disadvantage 
+    - all functionality in single code
+    - dificult to manage
+    - re-depoyment for small change
+    - needs downtime
+
+### Microservice architechture
+| user interface |
+|----------------|
+| ms1 ms2 ms3 ms4|
+|       DB       |
+
+- advantage
+    - each unit is a separate unit
+    - better flexibility, scalability, maintanability
+    - touch one ms when there is change only to that
+- disadvantage
+    - complex in terms of architecture
