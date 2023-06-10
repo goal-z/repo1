@@ -71,4 +71,5 @@ docker stop my-curl-container
 ```
 docker rm my-curl-container
 ```
-
+## Docker registry
+_Docker hub, ghcr, ACR etc.._
