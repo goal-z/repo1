@@ -67,6 +67,14 @@ docker ps
 docker exec -it <id> sh
 ```
 _-it is interective mode. after docker ps, place the id number above_
+## To see all images
+```
+docker images
+```
+## To remove image
+```
+docker image rm simpplewebsite
+```
 ## To stop the docker container
 ```
 docker stop my-curl-container
@@ -74,6 +82,15 @@ docker stop my-curl-container
 ## To remove the container
 ```
 docker rm my-curl-container
+```
+## To tag an image
+```
+docker tag simplewebsite repo1/simplewebsite:v1
+```
+_tag image with an new name (with reponame) in it like repo1/simplewebsite:v1_
+## Push image to Docker hub
+```
+docker push repo1/simplewebsite:v1
 ```
 ## Docker registry
 _Docker hub, ghcr, ACR etc.._
