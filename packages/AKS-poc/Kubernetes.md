@@ -98,3 +98,15 @@
 - kubelet infomrs the container runtime that it needs to run the Pods
 - container runtime gives the state of the Pods to the kubelet
 - kubelet continuously updates the API server which stores the state of the Pods in etcd
+- if we had created a deployment, the cintroller manager would have come into picture
+- contoller manager would have created a replication controller to ensure the desired states of the replicas of the Pods are held intact
+- while creating deployment, a replicaset is created by the controller manager and the replicasets inturn creats and monitors the pods
+
+## example
+- lets say we created a deployment with 3 Pods - 1 on worker node 1 and 2,3 in worker node 2
+- Pods hosts websites
+- we want users to access the site
+- one way is to create `service` type load-balancers
+- service -> cloud controller manager -> cloud provider API and create a load-balancer resource in the public ip address associated with LB in cloud
+- service distributes the traffic to Pods scheduled on both nodes
+- public ip assigned to LB and internally the traffic is routed accordingly by the ip table rules configured by the kube-proxy
