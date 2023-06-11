@@ -83,3 +83,18 @@
 |kubelet|
 |kube-proxy|
 |container runtime ( 2 pod ) |
+
+## What happens when a developer creates a pod
+- suppose developer is using kubectl to reference a yaml file to create pods
+- K8 API is based on `Go` language
+- kubectl converts the yaml into json and sends to API server
+- to do this, it uses a post request
+- after API server receives the request to create the Pod, it validates the request and ensures that the user has the right permissions to create the Pods
+- if the user is authorized, the API server upates the etcd database, which will store the config and states of the Pods
+- next the schedular is notified with the details of the Pod
+- the schedular finds a proper node to schedule the Pods
+- scheduler updates the API server which updates the etcd
+- API server contact the kubelet running on the chosen node
+- kubelet infomrs the container runtime that it needs to run the Pods
+- container runtime gives the state of the Pods to the kubelet
+- kubelet continuously updates the API server which stores the state of the Pods in etcd
