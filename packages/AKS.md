@@ -1,0 +1,11 @@
+# AKS
+- managed kubernetes service by microsoft
+- operationsl burden is shifted
+- easy create, deploy, manage
+- manages critical tasks like manage control plane, health checks and maintenance
+- manual and auto scale
+- manual and auto upgrade
+- security -> compliant with SOC, ISO, PCI, DSS, HIPAA and encryption, integration with RBAC & AAD
+- monitoring -> enable monitoring in a few clicks
+- ecosystem -> can be integrated with lot of Azur products and features like MS defender, Log alalytics, Azur firewall
+- 
